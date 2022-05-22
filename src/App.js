@@ -21,6 +21,7 @@ function App() {
     faceapi.matchDimensions(canvasRef.current, { height: image.height, width: image.width })
     const resize = faceapi.resizeResults(details, { height: image.height, width: image.width })
     faceapi.draw.drawDetections(canvasRef.current, resize)
+    faceapi.draw.drawFaceLandmarks(canvasRef.current, resize)
     faceapi.draw.drawFaceExpressions(canvasRef.current, resize)
 
   }
